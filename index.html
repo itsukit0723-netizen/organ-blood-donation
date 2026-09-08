@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REPORT｜「意思」と「支え合い」臓器提供と献血</title>
+<meta name="description" content="高校 保健の授業レポート発表「『意思』と『支え合い』臓器提供と献血（Organ &amp; Blood Donation）」のWeb版。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+<a class="skip" href="#contents">本文へスキップ</a>
+
+<nav class="dots" aria-label="章ナビゲーション">
+  <ul>
+    <li><a href="#contents" data-dot="contents"><span class="dots__n">00</span><span class="dots__t">目次</span></a></li>
+    <li><a href="#ch01" data-dot="ch01"><span class="dots__n">01</span><span class="dots__t">意思表示</span></a></li>
+    <li><a href="#ch02" data-dot="ch02"><span class="dots__n">02</span><span class="dots__t">現状と脳死</span></a></li>
+    <li><a href="#ch03" data-dot="ch03"><span class="dots__n">03</span><span class="dots__t">意思と公平</span></a></li>
+    <li><a href="#ch04" data-dot="ch04"><span class="dots__n">04</span><span class="dots__t">献血</span></a></li>
+    <li><a href="#closing" data-dot="closing"><span class="dots__n">05</span><span class="dots__t">まとめ</span></a></li>
+  </ul>
+</nav>
+
+<div class="tools">
+  <button class="tools__btn" type="button" aria-expanded="false" aria-controls="toolsPanel">
+    <span class="tools__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="sr">表示の設定を開く</span>
+  </button>
+  <div class="tools__panel" id="toolsPanel" hidden>
+    <p class="tools__label">Settings</p>
+    <button class="tools__item" type="button" id="motionToggle" aria-pressed="false">
+      <span class="tools__sw" aria-hidden="true"></span>動きを減らす
+    </button>
+    <a class="tools__item" href="#top">先頭にもどる</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero sec sec--yellow" id="hero">
+    <div class="hero__inner wrap">
+      <div class="hero__text">
+        <p class="eyebrow eyebrow--xl" data-anim="eyebrow">REPORT</p>
+        <p class="hero__sub" data-anim="up" style="--d:.12s">「意思」と「支え合い」</p>
+        <span class="rule rule--hero" data-anim="rule" style="--d:.28s"></span>
+        <h1 class="hero__title" data-anim="lines" style="--d:.34s"><span class="line"><i>臓器提供と献血</i></span></h1>
+      </div>
+      <figure class="hero__fig fig" role="img"
+              aria-label="ノートパソコンに向かって調べものをしている人の線画イラスト">
+        <svg class="sparkle" style="--sx:-7%; --sy:1%; --ss:14%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2 L60 40 L98 50 L60 60 L50 98 L40 60 L2 50 L40 40 Z"/></svg>
+        <svg class="sparkle" style="--sx:5%; --sy:14%; --ss:8%; --sd:.22s" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2 L60 40 L98 50 L60 60 L50 98 L40 60 L2 50 L40 40 Z"/></svg>
+        <img src="assets/illust/3.png" alt="" data-split="hero">
+      </figure>
+    </div>
+    <div class="hero__band">
+      <p class="latin latin--lg" data-anim="eyebrow" style="--d:.55s">Organ &amp; Blood Donation</p>
+      <span class="scrollcue" aria-hidden="true"><i></i></span>
+    </div>
+  </section>
+
+  <!-- ============ CONTENTS ============ -->
+  <section class="sec sec--white" id="contents" aria-labelledby="contents-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Contents</p>
+        <h2 class="h2" id="contents-h" data-anim="lines"><span class="line"><i>目次</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="grid grid--toc">
+        <ol class="toc">
+          <li data-anim="toc" style="--d:.05s"><a href="#ch01"><span class="toc__n">01.</span><span class="toc__t">臓器提供の意思表示</span><span class="toc__ar" aria-hidden="true"></span></a></li>
+          <li data-anim="toc" style="--d:.15s"><a href="#ch02"><span class="toc__n">02.</span><span class="toc__t">日本の現状と脳死</span><span class="toc__ar" aria-hidden="true"></span></a></li>
+          <li data-anim="toc" style="--d:.25s"><a href="#ch03"><span class="toc__n">03.</span><span class="toc__t">意思をめぐる問い</span><span class="toc__ar" aria-hidden="true"></span></a></li>
+          <li data-anim="toc" style="--d:.35s"><a href="#ch04"><span class="toc__n">04.</span><span class="toc__t">献血とのつながり</span><span class="toc__ar" aria-hidden="true"></span></a></li>
+        </ol>
+        <figure class="fig fig--toc" role="img"
+                aria-label="絵筆と絵の具を手に、両腕を大きく広げて跳ねている人の線画イラスト">
+          <img src="assets/art/contents-paint.png" alt="" data-split="toc">
+        </figure>
+      </div>
+    </div>
+    <div class="band" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ CH 01 DIVIDER ============ -->
+  <section class="divider sec sec--yellow" id="ch01" aria-labelledby="ch01-h">
+    <div class="wrap divider__inner">
+      <div class="divider__text">
+        <p class="chno" data-anim="chno">01</p>
+        <p class="eyebrow eyebrow--lg" data-anim="eyebrow" style="--d:.1s">Intention</p>
+        <span class="rule rule--wide" data-anim="rule" style="--d:.22s"></span>
+        <h2 class="divider__title" id="ch01-h" data-anim="lines" style="--d:.3s"><span class="line"><i>意思表示</i></span></h2>
+      </div>
+      <figure class="fig fig--divider fig--climb" role="img"
+              aria-label="宙に浮かびながらペンで大きな線を描いている人の線画イラスト">
+        <img src="assets/art/ch01-climb.png" alt="" data-split="climb">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ---- 01-A 意思表示とは ---- -->
+  <section class="sec sec--white" id="s-what" aria-labelledby="s-what-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Intention</p>
+        <h2 class="h2" id="s-what-h" data-anim="lines"><span class="line"><i>意思表示とは</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="grid">
+        <div>
+          <p class="lead" data-anim="lines" style="--d:.1s">
+            <span class="line"><i>「提供する」も</i></span>
+            <span class="line"><i>「提供しない」も</i></span>
+          </p>
+          <p class="body" data-anim="up" style="--d:.4s">マイナンバーカードや運転免許証で、どちらの意思も残すことができる。</p>
+          <p class="note" data-anim="up" style="--d:.5s">この制度は、臓器提供を促すためだけのものではなく、「自分は臓器を提供したくない」という意思も尊重するための制度である。</p>
+        </div>
+        <figure class="fig fig--side" role="img"
+                aria-label="画面に表示された意思表示の入力欄を指さしている人の線画イラスト">
+          <img src="assets/illust/5.png" alt="" data-split="stand3">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- 01-B 意思表示のルール ---- -->
+  <section class="sec sec--white" id="s-rule" aria-labelledby="s-rule-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Intention</p>
+        <h2 class="h2" id="s-rule-h" data-anim="lines"><span class="line"><i>意思表示のルール</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="grid">
+        <dl class="deflist">
+          <div class="deflist__row" data-anim="row" style="--d:.05s"><dt>表示方法</dt><dd>カード・免許証・ネット</dd></div>
+          <div class="deflist__row" data-anim="row" style="--d:.14s"><dt>15歳以上</dt><dd>「提供する」意思も有効</dd></div>
+          <div class="deflist__row" data-anim="row" style="--d:.23s"><dt>15歳未満</dt><dd>「提供しない」のみ有効</dd></div>
+          <div class="deflist__row" data-anim="row" style="--d:.32s"><dt>未表示</dt><dd>家族の承諾で提供可能</dd></div>
+          <div class="deflist__row deflist__row--mark" data-anim="row" style="--d:.41s"><dt>大切なこと</dt><dd>家族と話しておくこと</dd></div>
+        </dl>
+        <figure class="fig fig--side" role="img"
+                aria-label="大きな鉛筆を抱えて意思を書き残そうとしている人の線画イラスト">
+          <img src="assets/illust/2.png" alt="" data-split="pencil">
+        </figure>
+      </div>
+      <p class="note note--wide" data-anim="up">本人が提供する意思も拒否する意思も示していない場合、家族が承諾することで臓器提供が可能になる。だからこそ、意思表示をして終わりではなく、普段から家族と話しておくことが重要である。</p>
+    </div>
+    <div class="band" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ CH 02 DIVIDER ============ -->
+  <section class="divider sec sec--yellow" id="ch02" aria-labelledby="ch02-h">
+    <div class="wrap divider__inner">
+      <div class="divider__text">
+        <p class="chno" data-anim="chno">02</p>
+        <p class="eyebrow eyebrow--lg" data-anim="eyebrow" style="--d:.1s">Reality in Japan</p>
+        <span class="rule rule--wide" data-anim="rule" style="--d:.22s"></span>
+        <h2 class="divider__title" id="ch02-h" data-anim="lines" style="--d:.3s"><span class="line"><i>現状と脳死</i></span></h2>
+      </div>
+      <figure class="fig fig--divider fig--listen" role="img"
+              aria-label="音楽を聴きながら横になってスマートフォンを見ている人と、波打つ模様の線画イラスト">
+        <img src="assets/art/ch02-listen.png" alt="" data-split="listen">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ---- 02-A 脳死と心停止後 ---- -->
+  <section class="sec sec--white" id="s-brain" aria-labelledby="s-brain-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Reality in Japan</p>
+        <h2 class="h2" id="s-brain-h" data-anim="lines"><span class="line"><i>脳死と心停止後</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <ul class="cards">
+        <li class="card" data-anim="card" style="--d:.05s">
+          <span class="card__disc" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M21 47c-7-4-11-12-9-20 2-8 10-14 18-13 3-5 10-7 16-4 6 3 9 10 7 17 4 4 4 11 0 15-3 4-9 6-14 4"/><path d="M32 11v41"/><path d="M32 25c-4 0-8 2-10 5"/><path d="M32 35c4 0 7 2 9 5"/><path d="M26 52c0 5 4 8 9 8"/></svg>
+          </span>
+          <h3 class="card__t">脳死</h3>
+          <p class="card__d">脳の機能が回復せず<br>失われた状態。</p>
+        </li>
+        <li class="card" data-anim="card" style="--d:.18s">
+          <span class="card__disc" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M32 55S11 41 11 26c0-7 5-12 11-12 5 0 8 3 10 7 2-4 5-7 10-7 6 0 11 5 11 12 0 15-21 29-21 29Z"/><path d="M5 31h12l4-8 5 15 4-7h6"/></svg>
+          </span>
+          <h3 class="card__t">心停止後</h3>
+          <p class="card__d">心臓が止まった状態。<br>心臓は移植できない。</p>
+        </li>
+        <li class="card" data-anim="card" style="--d:.31s">
+          <span class="card__disc" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><rect x="9" y="13" width="46" height="41" rx="4"/><path d="M9 25h46"/><path d="M21 7v10M43 7v10"/><path d="M19 37h11M19 45h26M35 37h10"/></svg>
+          </span>
+          <h3 class="card__t">2025年の提供</h3>
+          <p class="card__d">全<b class="num" data-count="158">0</b>件のうち<br>脳死下<b class="num" data-count="146">0</b>件、<br>心停止後<b class="num" data-count="12">0</b>件。</p>
+        </li>
+      </ul>
+      <blockquote class="quote" data-anim="up">
+        <p>医学的には脳死という状態を判断できても、家族にとっては「大切な人がまだ生きている」と感じることがある。医学的な死の判断と、家族が死を受け入れる気持ちにはズレが生じる場合がある。</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ---- 02-B 移植を待つ人 ---- -->
+  <section class="sec sec--white" id="s-wait" aria-labelledby="s-wait-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Reality in Japan</p>
+        <h2 class="h2" id="s-wait-h" data-anim="lines"><span class="line"><i>移植を待つ人</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="grid grid--wait">
+        <div>
+          <p class="stamp" data-anim="up">2026年7月末時点</p>
+          <p class="bignum" data-anim="lines" style="--d:.12s">
+            <span class="line"><i>腎臓だけで</i></span>
+            <span class="line"><i><b class="num" data-count="15100" data-comma="1">0</b>人</i></span>
+          </p>
+          <p class="body" data-anim="up" style="--d:.42s">心臓778人、肺633人、肝臓643人。<br>提供件数との間に大きな差がある。</p>
+        </div>
+        <div class="bars" data-anim="bars">
+          <p class="bars__cap">移植希望登録者数（2026年7月31日時点）</p>
+          <ul>
+            <li style="--d:0s"><span class="bars__l">腎臓</span><span class="bars__t"><i style="--w:100%"></i></span><span class="bars__v"><b class="num" data-count="15100" data-comma="1">0</b>人</span></li>
+            <li style="--d:.08s"><span class="bars__l">心臓</span><span class="bars__t"><i style="--w:5.2%"></i></span><span class="bars__v"><b class="num" data-count="778">0</b>人</span></li>
+            <li style="--d:.16s"><span class="bars__l">肝臓</span><span class="bars__t"><i style="--w:4.3%"></i></span><span class="bars__v"><b class="num" data-count="643">0</b>人</span></li>
+            <li style="--d:.24s"><span class="bars__l">肺</span><span class="bars__t"><i style="--w:4.2%"></i></span><span class="bars__v"><b class="num" data-count="633">0</b>人</span></li>
+            <li style="--d:.32s"><span class="bars__l">膵臓</span><span class="bars__t"><i style="--w:0.9%"></i></span><span class="bars__v"><b class="num" data-count="129">0</b>人</span></li>
+            <li style="--d:.4s"><span class="bars__l">小腸</span><span class="bars__t"><i style="--w:0.4%"></i></span><span class="bars__v"><b class="num" data-count="10">0</b>人</span></li>
+          </ul>
+          <p class="src">出典：日本臓器移植ネットワーク</p>
+        </div>
+      </div>
+    </div>
+    <div class="band" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ CH 03 DIVIDER ============ -->
+  <section class="divider sec sec--yellow" id="ch03" aria-labelledby="ch03-h">
+    <div class="wrap divider__inner">
+      <div class="divider__text">
+        <p class="chno" data-anim="chno">03</p>
+        <p class="eyebrow eyebrow--lg" data-anim="eyebrow" style="--d:.1s">Whose Choice</p>
+        <span class="rule rule--wide" data-anim="rule" style="--d:.22s"></span>
+        <h2 class="divider__title" id="ch03-h" data-anim="lines" style="--d:.3s"><span class="line"><i>意思と公平</i></span></h2>
+      </div>
+      <figure class="fig fig--divider fig--read" role="img"
+              aria-label="床に寝そべってタブレットを読んでいる人の線画イラスト">
+        <img src="assets/art/ch03-read.png" alt="" data-split="read">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ---- 03-A 本人と家族 ---- -->
+  <section class="sec sec--white" id="s-whose" aria-labelledby="s-whose-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Whose Choice</p>
+        <h2 class="h2" id="s-whose-h" data-anim="lines"><span class="line"><i>本人と家族</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="grid">
+        <div>
+          <p class="lead" data-anim="lines" style="--d:.1s">
+            <span class="line"><i>どちらの意思を</i></span>
+            <span class="line"><i>優先するべきか</i></span>
+          </p>
+          <p class="body" data-anim="up" style="--d:.4s">本人の自己決定を尊重するか、家族の気持ちを尊重するか。簡単な正解はない。</p>
+          <p class="note" data-anim="up" style="--d:.5s">家族にとっては大切な人を失った直後に、臓器提供について判断することになる。その気持ちを無視することもできない。だからこそ、本人が元気なうちに自分の考えを家族に伝えておくことが大切だと思う。</p>
+        </div>
+        <figure class="fig fig--side" role="img"
+                aria-label="立ち止まって考えごとをしている人の線画イラスト">
+          <img src="assets/illust/8.png" alt="" data-split="stand3">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- 03-B 公平性を考える ---- -->
+  <section class="sec sec--white" id="s-fair" aria-labelledby="s-fair-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Whose Choice</p>
+        <h2 class="h2" id="s-fair-h" data-anim="lines"><span class="line"><i>公平性を考える</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="duo">
+        <section class="duo__col" data-anim="card" style="--d:.05s">
+          <h3 class="duo__t">臓器提供は無償が原則</h3>
+          <p class="duo__d">提供者の善意で成り立っている。誰に移植するかは、医学的な必要性や適合性で判断される。</p>
+        </section>
+        <span class="duo__vs" aria-hidden="true" data-anim="pop"></span>
+        <section class="duo__col" data-anim="card" style="--d:.2s">
+          <h3 class="duo__t">お金で優先できたら？</h3>
+          <p class="duo__d">お金を持つ人ほど移植を受けやすくなる。命を救う医療に経済格差が入り込んでしまう。</p>
+        </section>
+      </div>
+      <p class="note note--wide" data-anim="up">臓器提供を「商品」のように扱ってしまうと、本来は命を救うための制度が、経済力によって命の価値を決める仕組みになってしまう危険がある。</p>
+    </div>
+    <div class="band" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ CH 04 DIVIDER ============ -->
+  <section class="divider sec sec--yellow" id="ch04" aria-labelledby="ch04-h">
+    <div class="wrap divider__inner">
+      <div class="divider__text">
+        <p class="chno" data-anim="chno">04</p>
+        <p class="eyebrow eyebrow--lg" data-anim="eyebrow" style="--d:.1s">Blood Donation</p>
+        <span class="rule rule--wide" data-anim="rule" style="--d:.22s"></span>
+        <h2 class="divider__title" id="ch04-h" data-anim="lines" style="--d:.3s"><span class="line"><i>献血とのつながり</i></span></h2>
+      </div>
+      <figure class="fig fig--divider fig--heart" role="img"
+              aria-label="スマートフォンを手にして、ハートの吹き出しを浮かべている人の線画イラスト">
+        <img src="assets/art/ch04-heart.png" alt="" data-split="heart">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ---- 04-A 臓器提供と献血 ---- -->
+  <section class="sec sec--white" id="s-blood" aria-labelledby="s-blood-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Blood Donation</p>
+        <h2 class="h2" id="s-blood-h" data-anim="lines"><span class="line"><i>臓器提供と献血</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="duo duo--lists">
+        <section class="duo__col">
+          <h3 class="tag" data-anim="tag">共通点</h3>
+          <ul class="ticks">
+            <li data-anim="tick" style="--d:.12s">身体の一部を提供する</li>
+            <li data-anim="tick" style="--d:.22s">無償の協力で成り立つ</li>
+            <li data-anim="tick" style="--d:.32s">医療を支えている</li>
+          </ul>
+        </section>
+        <section class="duo__col">
+          <h3 class="tag" data-anim="tag" style="--d:.1s">ちがい</h3>
+          <ul class="ticks">
+            <li data-anim="tick" style="--d:.22s">献血は生きている間に</li>
+            <li data-anim="tick" style="--d:.32s">臓器提供は死後に託す</li>
+            <li data-anim="tick" style="--d:.42s">献血は今できること</li>
+          </ul>
+        </section>
+      </div>
+      <p class="note note--wide" data-anim="up">献血は「今、自分にできること」、臓器提供は「もしものときに、自分の意思を誰かにつなぐこと」と考えることができる。</p>
+    </div>
+  </section>
+
+  <!-- ---- 04-B 若い世代の献血 ---- -->
+  <section class="sec sec--white" id="s-young" aria-labelledby="s-young-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Blood Donation</p>
+        <h2 class="h2" id="s-young-h" data-anim="lines"><span class="line"><i>若い世代の献血</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <div class="grid">
+        <div>
+          <p class="stamp" data-anim="up">10代から30代の献血者数</p>
+          <p class="bignum" data-anim="lines" style="--d:.12s">
+            <span class="line"><i>この10年で</i></span>
+            <span class="line"><i>約<b class="num" data-count="27">0</b>％減少</i></span>
+          </p>
+          <p class="body" data-anim="up" style="--d:.42s">少子化によって献血をすることができる世代そのものが減っていく中で、若い世代が献血について知り、将来の医療を支える側になることが重要である。</p>
+          <p class="src" data-anim="up" style="--d:.5s">出典：厚生労働省</p>
+        </div>
+        <figure class="fig fig--side fig--side-wide" role="img"
+                aria-label="書類を宙に舞わせながら跳んでいる人の線画イラスト">
+          <img src="assets/illust/6.png" alt="" data-split="papers">
+        </figure>
+      </div>
+    </div>
+    <div class="band" aria-hidden="true"></div>
+  </section>
+
+  <!-- ---- まとめ 私たちにできること ---- -->
+  <section class="sec sec--white" id="s-do" aria-labelledby="s-do-h">
+    <div class="wrap sec__body">
+      <header class="shead">
+        <p class="eyebrow" data-anim="eyebrow">Blood Donation</p>
+        <h2 class="h2" id="s-do-h" data-anim="lines"><span class="line"><i>私たちにできること</i></span></h2>
+        <span class="rule" data-anim="rule" style="--d:.18s"></span>
+      </header>
+      <ol class="flow">
+        <li class="flow__i" data-anim="chev" style="--d:0s"><span class="flow__c">知る</span><span class="flow__d">臓器提供の<br>制度を知る</span></li>
+        <li class="flow__i" data-anim="chev" style="--d:.1s"><span class="flow__c">考える</span><span class="flow__d">自分はどう<br>考えるか</span></li>
+        <li class="flow__i" data-anim="chev" style="--d:.2s"><span class="flow__c">意思表示</span><span class="flow__d">カードや<br>ネットで残す</span></li>
+        <li class="flow__i" data-anim="chev" style="--d:.3s"><span class="flow__c">話し合う</span><span class="flow__d">家族に考えを<br>伝える</span></li>
+        <li class="flow__i" data-anim="chev" style="--d:.4s"><span class="flow__c">献血する</span><span class="flow__d">今できる<br>支え合い</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section class="sec sec--yellow closing" id="closing" aria-labelledby="closing-h">
+    <div class="wrap closing__inner">
+      <figure class="fig fig--jump" role="img"
+              aria-label="両手を上げて跳び上がっている人の線画イラスト">
+        <svg class="sparkle" style="--sx:76%; --sy:2%; --ss:15%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2 L60 40 L98 50 L60 60 L50 98 L40 60 L2 50 L40 40 Z"/></svg>
+        <svg class="sparkle" style="--sx:88%; --sy:17%; --ss:9%; --sd:.26s" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2 L60 40 L98 50 L60 60 L50 98 L40 60 L2 50 L40 40 Z"/></svg>
+        <img src="assets/art/close-jump.png" alt="" data-split="jump">
+      </figure>
+      <div class="closing__text">
+        <h2 class="closing__title" id="closing-h" data-anim="lines">
+          <span class="line"><i>まず、家族と</i></span>
+          <span class="line"><i>話してみませんか</i></span>
+        </h2>
+        <div class="search" data-anim="search" role="img" aria-label="検索窓に「意思表示」と入力された画面のイメージ">
+          <span class="search__btn" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><circle cx="17" cy="17" r="11"/><path d="M25 25l10 10"/></svg>
+          </span>
+          <span class="search__field"><span class="search__q" data-type="意思表示"></span><i class="search__caret" aria-hidden="true"></i></span>
+          <span class="search__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="closing__band">
+      <p class="latin latin--lg" data-anim="eyebrow">Organ &amp; Blood Donation</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <p class="latin">Organ &amp; Blood Donation</p>
+      <p class="foot__title">REPORT｜「意思」と「支え合い」臓器提供と献血</p>
+    </div>
+    <div class="foot__src">
+      <h2 class="foot__h">出典</h2>
+      <ul>
+        <li><span>日本臓器移植ネットワーク</span>臓器提供件数（2025年・158件／脳死下146件・心停止後12件）、移植希望登録者数（2026年7月31日時点：心臓778人・肺633人・肝臓643人・腎臓15,100人・膵臓129人・小腸10人）</li>
+        <li><span>厚生労働省</span>献血者数（10代から30代の献血者数はこの10年で約27％減少）</li>
+      </ul>
+      <p class="foot__note">高校 保健の授業でのレポート発表をWebサイトにまとめたものです。</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
