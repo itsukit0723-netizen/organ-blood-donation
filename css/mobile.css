@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/* =========================================================
+   スマートフォン版（横幅 767px 以下）
+   ---------------------------------------------------------
+   style.css には一切手を入れず、このファイルで上書きだけを行う。
+   PC版のレイアウト・配色・アニメーションはそのまま残る。
+
+   直しているところ
+   1. イラストが文字の下に大きく出てしまう問題
+      → 見出しの横に小さく戻し、PC版と同じ左右の構図にする
+   2. 右下の三本線ボタンが何もできない問題
+      → 章メニュー（目次）＋設定をまとめた実用的なメニューにする
+   3. PCで右側に出る章ドットナビが出ない問題
+      → 画面下に固定した章バーとして常に表示する
+   4. 文字サイズ・字間・余白をスマホ幅向けに詰める
+   ========================================================= */
+
+@media (max-width: 767px){
+
+  /* ---------------------------------------------------
+     1. 全体の余白と文字
+     --------------------------------------------------- */
+  :root{
+    --gutter: 1.15rem;
+  }
+  /* 登場アニメーションで一瞬だけ画面の外へ出るパーツがあるため、
+     横スクロールが生まれないように確実に押さえる */
+  html{ overflow-x:clip; }
+  body{
+    line-height:1.85;
+    letter-spacing:.04em;
+    padding-bottom:4.4rem;          /* 下に固定した章バーのぶん */
+    overflow-x:clip;
+  }
+
+  .sec__body{ padding-block: 3.2rem; }
+  .band{ height:2.4rem; }
+
+  /* 見出しは字間を詰めて折り返しを減らす */
+  .h2{ font-size:1.5rem; letter-spacing:.08em; }
+  .eyebrow{ font-size:.68rem; letter-spacing:.24em; }
+  .eyebrow--lg{ font-size:1rem; letter-spacing:.2em; }
+  .rule, .rule--wide, .rule--hero{ height:2px; width:100%; }
+  .shead{ margin-bottom:.2rem; }
+
+  .body{ font-size:.94rem; line-height:1.95; letter-spacing:.04em; margin-top:1.1rem; }
+  .note{ font-size:.8rem; line-height:1.85; padding-left:.85rem; border-left-width:3px; }
+  .note--wide{ margin-top:1.6rem; }
+  .lead{ font-size:1.55rem; letter-spacing:.04em; line-height:1.5; }
+  .bignum{ font-size:1.75rem; }
+  .stamp{ font-size:.92rem; margin-bottom:.8rem; }
+  .src{ font-size:.66rem; }
+
+  /* ---------------------------------------------------
+     2. イラスト：PC版と同じ「文字の左・絵は右」に戻し、小さくする
+     --------------------------------------------------- */
+  /* 下の章バーに隠れないように、1画面ぶんの高さから差し引く */
+  .hero{
+    min-height: calc(100vh - 4.4rem);
+    min-height: calc(100svh - 4.4rem - env(safe-area-inset-bottom, 0px));
+  }
+  .hero__inner{
+    grid-template-columns: minmax(0,1fr) minmax(0,.44fr);
+    gap:.9rem;
+    padding-block:2.5rem;
+  }
+  .hero__fig{ max-width:100%; }
+  .hero__sub{ font-size:.95rem; letter-spacing:.14em; margin-top:.5rem; }
+  .eyebrow--xl{ font-size:1.9rem; letter-spacing:.26em; }
+  .hero__title{
+    white-space:normal;              /* 万一入りきらないときは折り返す */
+    font-size:clamp(1.45rem, 7.4vw, 2.05rem);
+    letter-spacing:.05em;
+    margin-top:.9rem;
+  }
+  .hero__band{ padding-block:.7rem; }
+  .latin--lg{ font-size:.82rem; letter-spacing:.2em; }
+
+  /* 章の扉（01〜04） */
+  .divider__inner{
+    grid-template-columns: minmax(0,1fr) minmax(0,.5fr);
+    gap:.9rem;
+    padding-block:3rem;
+  }
+  .divider{ min-height:78vh; min-height:78svh; }
+  .chno{ font-size:1.9rem; margin-bottom:.9rem; }
+  .divider__title{ font-size:clamp(1.5rem, 8.4vw, 2.4rem); letter-spacing:.05em; margin-top:1rem; }
+  .fig--divider, .fig--climb, .fig--listen, .fig--read, .fig--heart{ max-width:100%; }
+
+  /* 本文セクションの添えイラストは、右寄せの小さなアクセントに */
+  .grid, .grid--toc, .grid--wait{
+    grid-template-columns: minmax(0,1fr);
+    gap:1.6rem;
+    margin-top:1.6rem;
+  }
+  .fig--side{ max-width:38vw; margin-left:auto; margin-right:0; }
+  .fig--side-wide{ max-width:46vw; }
+  .fig--toc{ max-width:42vw; margin-left:auto; margin-right:0; }
+
+  /* まとめページ */
+  .closing{ min-height:auto; }
+  .closing__inner{
+    grid-template-columns: minmax(0,.42fr) minmax(0,1fr);
+    gap:.8rem;
+    padding-block:2.8rem;
+    align-items:center;
+  }
+  .fig--jump{ max-width:100%; order:0; }
+  .closing__title{ font-size:1.5rem; letter-spacing:.05em; line-height:1.5; }
+  .closing__band{ padding-block:.7rem; }
+
+  /* ---------------------------------------------------
+     3. 目次・表・カード・図解
+     --------------------------------------------------- */
+  .toc{ gap:.5rem; }
+  .toc a{ font-size:1.12rem; letter-spacing:.06em; gap:.8rem; padding:.5rem 0; }
+  .toc__ar{ width:20px; }
+
+  .deflist__row{ padding:.7rem 0; }
+  .deflist dt{ font-size:.78rem; letter-spacing:.12em; color:var(--ink-mid); }
+  .deflist dd{ font-size:1.05rem; letter-spacing:.05em; }
+
+  .cards{ grid-template-columns:minmax(0,1fr); gap:1.9rem; margin-top:2rem; }
+  .card__disc{ width:104px; margin-bottom:.9rem; }
+  .card__t{ font-size:1.08rem; letter-spacing:.1em; }
+  .card__d{ font-size:.86rem; }
+  .quote{ margin-top:2rem; padding:1.1rem 1rem; border-left-width:4px; }
+  .quote p{ font-size:.88rem; line-height:1.9; letter-spacing:.04em; }
+
+  .bars{ margin-top:.4rem; }
+  .bars__cap{ font-size:.76rem; letter-spacing:.08em; margin-bottom:1rem; }
+  .bars li{ grid-template-columns:3em minmax(0,1fr) 4.6em; gap:.45rem; }
+  .bars__l{ font-size:.8rem; letter-spacing:.04em; }
+  .bars__t{ height:12px; }
+  .bars__v{ font-size:.72rem; }
+
+  .duo{ gap:2rem; margin-top:2rem; }
+  .duo__t{ font-size:1.05rem; letter-spacing:.08em; margin-bottom:.8rem; }
+  .duo__d{ font-size:.88rem; text-align:left; }
+  .duo--lists .duo__col + .duo__col{
+    padding-top:1.6rem; border-top:1px solid rgba(48,47,40,.14);
+  }
+  .tag{ font-size:1.05rem; letter-spacing:.1em; padding:.4rem 1.1rem .4rem .8rem; margin-bottom:1rem; }
+  .ticks li{ font-size:1rem; letter-spacing:.05em; padding-left:1.3rem; }
+  .ticks li::before{ width:7px; height:7px; top:.6em; }
+
+  /* 矢羽根は縦に並べ、下向きの矢印にする */
+  .flow{ grid-template-columns:minmax(0,1fr); gap:.7rem; margin-top:2rem; }
+  .flow__c,
+  .flow__i:first-child .flow__c{
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 13px), 50% 100%, 0 calc(100% - 13px));
+    min-height:62px; padding:.75rem .6rem 1.4rem;
+    font-size:1.02rem; letter-spacing:.08em;
+  }
+  .flow__d{ margin-top:.5rem; font-size:.76rem; }
+
+  /* 検索窓 */
+  .search{ margin-top:1.4rem; }
+  .search__btn{ width:52px; }
+  .search__field{ font-size:1rem; letter-spacing:.1em; padding:.75rem .8rem; }
+  .search__dots{ padding-right:.9rem; }
+  .search__dots i{ width:5px; height:5px; }
+
+  /* フッター */
+  .foot{ padding-block:2.6rem; }
+  .foot__inner{ grid-template-columns:minmax(0,1fr); gap:1.8rem; }
+  .foot__title{ font-size:.9rem; }
+  .foot__src li{ font-size:.76rem; }
+
+  /* ---------------------------------------------------
+     4. 章ドットナビ → 画面下に固定した章バーにする
+        （PCで右側に出ているものと同じ役割）
+     --------------------------------------------------- */
+  .dots{
+    display:block;
+    position:fixed; top:auto; left:0; right:0; bottom:0;
+    transform:none; z-index:120;
+    background:var(--paper);
+    border-top:2px solid var(--ink);
+    padding:1.75rem 0 .65rem;
+    box-shadow:0 -6px 20px rgba(48,47,40,.10);
+  }
+  .dots ul{ flex-direction:row; justify-content:center; gap:1.05rem; }
+  .dots a{ justify-content:center; padding:.4rem .4rem; }
+  .dots__n{ display:none; }
+  .dots__t{
+    position:absolute; top:.5rem; left:0; right:0;
+    text-align:center; pointer-events:none;
+    font-size:.75rem; letter-spacing:.1em;
+    opacity:0; transform:none;
+    transition:opacity .25s var(--ease);
+  }
+  /* 指で触れても全部の名前が出ないようにし、現在の章だけ見せる */
+  .dots:hover .dots__t,
+  .dots:focus-within .dots__t{ opacity:0; }
+  .dots a.is-active .dots__t{ opacity:1; }
+  .dots a::after{ width:10px; height:10px; }
+  .dots a.is-active::after{ transform:scale(1.4); }
+
+  /* ---------------------------------------------------
+     5. 右下のボタン → 章メニュー＋設定の実用的なメニューに
+     --------------------------------------------------- */
+  .tools{ right:.9rem; bottom:5rem; z-index:130; }
+  .tools__btn{
+    width:46px; height:46px;
+    box-shadow:0 5px 16px rgba(48,47,40,.22);
+  }
+  .tools__panel{
+    right:0; bottom:56px;
+    width:min(70vw, 250px);
+    max-height:70vh; max-height:70svh; overflow-y:auto;
+    box-shadow:0 10px 30px rgba(48,47,40,.22);
+  }
+  .tools__nav{ display:block; }
+  .tools__nav a{
+    display:flex; align-items:baseline; gap:.6rem;
+    padding:.5rem .3rem;
+    font-family:var(--jp); font-weight:500; font-size:.86rem; letter-spacing:.06em;
+  }
+  .tools__nav a:hover{ background:var(--yellow-pale); }
+  .tools__nav span{
+    font-family:var(--mono); font-size:.7rem; color:var(--ink-soft);
+  }
+  .tools__sep{
+    height:1px; background:rgba(48,47,40,.16);
+    margin:.55rem 0;
+  }
+
+  .scrollcue{ display:none; }
+
+  /* ---------------------------------------------------
+     6. iPhoneのホームバー・ノッチ（セーフエリア）対応
+        画面下の章バーがホームバーに重ならないようにする
+     --------------------------------------------------- */
+  :root{
+    --safe-b: env(safe-area-inset-bottom, 0px);
+    --safe-l: env(safe-area-inset-left, 0px);
+    --safe-r: env(safe-area-inset-right, 0px);
+    --gutter: max(1.15rem, var(--safe-l), var(--safe-r));
+  }
+  body{ padding-bottom: calc(4.4rem + var(--safe-b)); }
+  .dots{ padding-bottom: calc(.65rem + var(--safe-b)); }
+  .tools{ bottom: calc(5rem + var(--safe-b)); }
+
+  /* iOSでリンクをタップしたときの灰色の点滅を消す */
+  a, button{ -webkit-tap-highlight-color: rgba(250,222,107,.45); }
+}
+
+/* 横向き（低い画面）のときは扉ページの高さを抑える */
+@media (max-width: 900px) and (orientation: landscape){
+  .divider{ min-height:auto; }
+  .divider__inner{ padding-block:2.4rem; }
+  .hero{ min-height:auto; }
+  .hero__inner{ padding-block:2.4rem; }
+}
